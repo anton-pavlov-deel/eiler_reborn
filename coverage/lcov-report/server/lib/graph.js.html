@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/lib/graph.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">server/lib/</a> graph.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import Matrix from './matrix';</span>
+&nbsp;
+class <span class="cstat-no" title="statement not covered" >Graph {</span>
+  constructor ({ <span class="cstat-no" title="statement not covered" >size, incidentMatrix }) <span class="fstat-no" title="function not covered" >{</span></span>
+    this.<span class="cstat-no" title="statement not covered" >_size = size;</span>
+    this.<span class="cstat-no" title="statement not covered" >_vertices = {};</span>
+&nbsp;
+    if (<span class="cstat-no" title="statement not covered" >incidentMatrix &amp;&amp; incidentMatrix._size !== size) {</span>
+      throw <span class="cstat-no" title="statement not covered" >new Error(`Graph: constructor: invalid size of incident matrix: ${incidentMatrix._size}. Expected: ${size}`);</span>
+    }
+&nbsp;
+    for (<span class="cstat-no" title="statement not covered" >let i = 0; i &lt; size; i++) {</span>
+      if (<span class="cstat-no" title="statement not covered" >incidentMatrix) {</span>
+        this.<span class="cstat-no" title="statement not covered" >_vertices[i] = incidentMatrix.getRowCoverage(i);</span>
+      } else {
+        this.<span class="cstat-no" title="statement not covered" >_vertices[i] = [];</span>
+      }
+    }
+  }
+&nbsp;
+  getIncidentMatrix (<span class="fstat-no" title="function not covered" >verticesList) {</span>
+    let <span class="cstat-no" title="statement not covered" >size = this._size;</span>
+    if (<span class="cstat-no" title="statement not covered" >verticesList &amp;&amp; Array.isArray(verticesList)) {</span>
+      size = <span class="cstat-no" title="statement not covered" >verticesList.length;</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >resultMatrix = new Matrix(size);</span>
+&nbsp;
+    if (<span class="cstat-no" title="statement not covered" >verticesList) {</span>
+      verticesList.<span class="cstat-no" title="statement not covered" >forEach(<span class="fstat-no" title="function not covered" >(origin, originIndex) =&gt; {</span></span>
+        this.<span class="cstat-no" title="statement not covered" >_vertices.forEach(<span class="fstat-no" title="function not covered" >(target) =&gt; {</span></span>
+          const <span class="cstat-no" title="statement not covered" >targetIndex = verticesList.indexOf(target);</span>
+          if (<span class="cstat-no" title="statement not covered" >targetIndex !== -1) {</span>
+            resultMatrix.<span class="cstat-no" title="statement not covered" >set(originIndex, targetIndex, 1);</span>
+          }
+        });
+      });
+      return <span class="cstat-no" title="statement not covered" >resultMatrix;</span>
+    }
+    this.<span class="cstat-no" title="statement not covered" >_vertices.forEach(<span class="fstat-no" title="function not covered" >(vertix, origin) =&gt; <span class="cstat-no" title="statement not covered" >resultMatrix.set(origin, vertix, 1));</span></span></span>
+    return <span class="cstat-no" title="statement not covered" >resultMatrix;</span>
+  }
+&nbsp;
+  addEdge (<span class="fstat-no" title="function not covered" >origin, target) {</span>
+    if (<span class="cstat-no" title="statement not covered" >!this._vertices[origin] || !this._vertices[target]) {</span>
+      throw <span class="cstat-no" title="statement not covered" >new Error(`Graph: addEdge: Invalid arguments: (${origin})--&gt;(${target})`);</span>
+    }
+    if (<span class="cstat-no" title="statement not covered" >!this._vertices[origin].includes(target)) {</span>
+      this.<span class="cstat-no" title="statement not covered" >_vertices[origin].push(target);</span>
+      return <span class="cstat-no" title="statement not covered" >true;</span>
+    }
+    return <span class="cstat-no" title="statement not covered" >false;</span>
+  }
+&nbsp;
+  removeEdge (<span class="fstat-no" title="function not covered" >origin, target) {</span>
+    if (<span class="cstat-no" title="statement not covered" >!this._vertices[origin]) {</span>
+      throw <span class="cstat-no" title="statement not covered" >new Error(`Graph: removeEdge: Invalid origin index: ${origin}`);</span>
+    }
+    const <span class="cstat-no" title="statement not covered" >targetIndex = this._vertices[origin].indexOf(target);</span>
+    if (<span class="cstat-no" title="statement not covered" >targetIndex === -1) {</span>
+      return <span class="cstat-no" title="statement not covered" >false;</span>
+    }
+    delete <span class="cstat-no" title="statement not covered" >this._vertices[origin][targetIndex];</span>
+    return <span class="cstat-no" title="statement not covered" >true;</span>
+  }
+&nbsp;
+  getSubgraph (<span class="fstat-no" title="function not covered" >verticesList) {</span>
+    if (<span class="cstat-no" title="statement not covered" >verticesList.some(<span class="fstat-no" title="function not covered" >(item) =&gt; <span class="cstat-no" title="statement not covered" >!this._vertices[item])) {</span></span></span>
+      throw <span class="cstat-no" title="statement not covered" >new Error(`Graph: getSubgraph: Invalid vertices list: ${verticesList}`);</span>
+    }
+  }
+}
+&nbsp;
+export default <span class="cstat-no" title="statement not covered" >Graph;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Feb 16 2019 12:28:04 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

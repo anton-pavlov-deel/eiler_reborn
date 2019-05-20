@@ -1,0 +1,11 @@
+{
+  "name": "eiler-reborn-backend",
+  "version": "1.0.0",
+  "description": "Backend for Eiler Reborn App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton Pavlov",
+  "license": "ISC"
+}

@@ -1,0 +1,41 @@
+@import './formField.styl'
+@import './config.styl';
+
+.main-app
+  position absolute
+  top 0px
+  left 0px
+  right 0px
+  bottom 0px
+
+.app-name
+  text-align center
+  width 100%
+
+.sub-header
+  width 100%
+  text-align center
+
+.dashboard
+  display flex
+  flex-direction row
+  &-part
+    width 50%
+    border 1px solid #343434
+
+.images
+  &-list
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    max-height 300px
+    overflow-y scroll
+    &_item
+      border 1px solid #565656
+      padding 30px
+      padding-left 0px
+      margin-left 10px
+      margin-top 10px
+
+.list
+  list-style none
